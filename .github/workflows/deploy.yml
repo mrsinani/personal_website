@@ -27,11 +27,10 @@ jobs:
           npm run build
           npx next export
 
-      - - name:
-            Debug: List Files
-      - if: ${{ success() }}
-      - run: |
-      - ls -la out
+      - name: List Files
+        if: ${{ success() }}
+        run: |
+          ls -la out
 
       - name: Deploy to GitHub Pages
         if: ${{ success() }}
