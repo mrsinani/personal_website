@@ -10,6 +10,7 @@ export default function Projects() {
     const projects = [
         {
             title: "this one",
+            description: "Built a responsive and visually appealing personal portfolio website using Next.js and Tailwind CSS, showcasing projects, skills, and achievements. Implemented dynamic routing and SEO optimization to enhance discoverability and user experience, while leveraging GitHub and Vercel for version control and continuous deployment.",
             delay: 0.2
         },
         {
