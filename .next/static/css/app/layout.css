@@ -898,6 +898,9 @@ video {
 .\[background-image\:var\(--white-gradient\)\2c var\(--aurora\)\] {
   background-image: var(--white-gradient),var(--aurora);
 }
+.\[background-image\:var\(--white-gradient\)\2c var\(--sage-gradient\)\] {
+  background-image: var(--white-gradient),var(--sage-gradient);
+}
 .\[background-position\:50\%_50\%\2c 50\%_50\%\] {
   background-position: 50% 50%,50% 50%;
 }
@@ -918,6 +921,13 @@ video {
   --blue-500: #3b82f6;
   --indigo-300: #a5b4fc;
   --violet-200: #ddd6fe;
+  --sage-300: #8FF7A7; /* Lighter Green Mint */
+  --sage-400: #52E09B; /* Vibrant Teal Green */
+  --sage-500: #1FC978; /* Strong Emerald Green */
+  --sage-600: #00A964; /* Deep Jade */
+  --sage-700: #008754; /* Dark Forest Green */
+  --sage-800: #006A42; /* Almost Black-Green */
+  --sage-900: #004D2C; /* Deepest Dark Teal */  
 }
 
 @keyframes aurora {
@@ -990,6 +1000,11 @@ video {
   background-image: var(--white-gradient),var(--aurora);
 }
 
+.after\:\[background-image\:var\(--white-gradient\)\2c var\(--sage-gradient\)\]::after {
+  content: var(--tw-content);
+  background-image: var(--white-gradient),var(--sage-gradient);
+}
+
 .after\:\[background-size\:200\%\2c _100\%\]::after {
   content: var(--tw-content);
   background-size: 200%, 100%;
@@ -1034,9 +1049,18 @@ video {
     background-image: var(--dark-gradient),var(--aurora);
   }
 
+  .dark\:\[background-image\:var\(--dark-gradient\)\2c var\(--sage-gradient\)\] {
+    background-image: var(--dark-gradient),var(--sage-gradient);
+  }
+
   .after\:dark\:\[background-image\:var\(--dark-gradient\)\2c var\(--aurora\)\]::after {
     content: var(--tw-content);
     background-image: var(--dark-gradient),var(--aurora);
+  }
+
+  .after\:dark\:\[background-image\:var\(--dark-gradient\)\2c var\(--sage-gradient\)\]::after {
+    content: var(--tw-content);
+    background-image: var(--dark-gradient),var(--sage-gradient);
   }
 }
 
