@@ -18,16 +18,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={inter.className}>
-        <AuroraBackground className="min-h-screen">
-            <div className="w-full">
-                <Navigation />
-                <main className="container mx-auto px-4 py-8">
-                    {children}
-                </main>
-            </div>
-        </AuroraBackground>
-        </body>
+            <body className={`bg-[#9caf88] ${inter.className}`}>
+                {/* <AuroraBackground className="min-h-screen"> */}
+                <div className="w-full">
+                    <Navigation />
+                    <main className="container mx-auto px-4 py-8">
+                        {children}
+                    </main>
+                </div>
+                {/* </AuroraBackground> */}
+            </body>
         </html>
     );
 }
