@@ -11,7 +11,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="text-center"
             >
-                <h1 className="text-6xl font-bold mb-4 text-black">danaid sinani</h1>
+                <h1 className="text-6xl font-bold mb-4 text-black">danaid sinani opa</h1>
                 <p className="text-center text-xl text-black/80">
                     <motion.span
                         initial={{opacity: 1}}
