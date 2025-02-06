@@ -31,7 +31,8 @@ export default function Projects() {
     ];
 
     return (
-        <div className="pt-20 pb-10 max-h-[calc(100vh-120px)] overflow-y-auto">
+        <div className="max-h-[calc(100vh-120px)] overflow-y-auto ai-style-change-1"
+        style={{ marginTop: '80px', position: 'relative', top: '0px' }}>
             <motion.div
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
