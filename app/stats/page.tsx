@@ -27,8 +27,8 @@ export default function Stats() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3 }}
                 >
-                    <p className="text-4xl font-bold text-blue-600">1</p>
-                    <p className="text-black"># times arrested</p>
+                    <p className="text-4xl font-bold text-blue-600">3+</p>
+                    <p className="text-black">yoe</p>
                 </motion.div>
                 <motion.div 
                     className="text-center p-6 bg-white/70 rounded-lg"
