@@ -9,6 +9,24 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "MoneyFi - Financial Independence App",
+      description:
+        "Developed a comprehensive financial independence planning application that helps users map out their journey to FI while taking future life events into account. The platform provides advanced analytics, progress tracking, and scenario planning to help users understand how future decisions impact their FI timeline.",
+      technologies:
+        "React, Next.js, TypeScript, Node.js, Financial APIs, Data Analytics, Chart.js, Tailwind CSS",
+      keyFeatures: [
+        "Financial Independence timeline planning with future life events integration",
+        "Personal finance analysis and investment analytics with data import capabilities",
+        "Progress tracking and historical data analysis with trend detection",
+        "Scenario planning: 'What if' analysis for major life decisions",
+        "Automated calculations replacing manual spreadsheets and faulty assumptions",
+        "Expense categorization, tagging, and pattern recognition analytics",
+      ],
+      link: "https://www.moneyfi.app/",
+      timeline: "2020 - Present",
+      delay: 0.05,
+    },
+    {
       title: "TradeGuard AI",
       description:
         "Developed a comprehensive SaaS platform that leverages advanced AI to help commodity brokers and traders identify fraudulent trade documents and assess transaction risks. The platform processes trade documents through sophisticated AI analysis to provide detailed risk assessments and fraud detection.",

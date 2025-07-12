@@ -10,7 +10,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="text-center"
       >
-        <h1 className="text-6xl font-bold mb-4 text-black">danaid sinani</h1>
+        <h1 className="text-6xl font-bold mb-4 text-black">Danaid Sinani</h1>
         <div className="space-y-2 mb-6">
           <p className="text-xl text-black/90 font-medium">
             Software Engineer at MILL5
