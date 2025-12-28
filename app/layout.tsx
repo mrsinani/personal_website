@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Danaid Sinani - Software Engineer",
   description:
-    "Software Engineer at MILL5 | Computer Science student at Boston University | Specializing in enterprise cloud applications, AI, and full-stack development.",
+    "Computer Science student at Boston University | Specializing in enterprise cloud applications, AI, and full-stack development.",
 };
 
 export default function RootLayout({

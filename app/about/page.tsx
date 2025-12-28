@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 
 export default function About() {
-  // Animation for the content
   const contentAnimation = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -24,12 +23,8 @@ export default function About() {
           <h1 className="text-3xl font-bold mb-6 text-black">about me</h1>
           <div className="space-y-6 text-black">
             <p>
-              Hey there! I'm a Computer Science student at Boston University,
-              set to graduate in May 2026. I'm currently working as a Software
-              Engineer at MILL5, where I develop enterprise-grade cloud
-              applications using Microsoft Azure and AI technologies. I'm
-              passionate about AI, full-stack development, and using tech to
-              solve real-world problems.
+              Hey there! I'm a Computer Science student at Boston University. I'm passionate about AI, full-stack
+              development, and using tech to solve real-world problems.
             </p>
 
             <div>
@@ -37,64 +32,70 @@ export default function About() {
                 Work Experience
               </h2>
               <div className="space-y-4">
-                <div className="border-l-4 border-blue-500 pl-4">
+                <div className="border-l-2 border-black/20 pl-4">
                   <h3 className="text-xl font-semibold">
-                    Software Engineer - MILL5
+                    Software Engineer Intern · MILL5
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    May 2025 - Present · Boston, Massachusetts
-                  </p>
+                  <p className="text-gray-600 text-sm">May 2025 – Sep 2025</p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
                     <li>
-                      Developing enterprise-grade cloud applications with Vision
-                      AI and machine learning models
+                      Built and launched backend services using Microsoft Azure
+                      and Node.js, integrating Salesforce and ZoomInfo APIs to
+                      automate data aggregation and lead enrichment, reducing
+                      latency by over 40%
                     </li>
                     <li>
-                      Working with Microsoft Azure services for scalable
-                      deployment and performance optimization
+                      Developed Vision AI prototypes with OCR using Azure
+                      Cognitive Services and Python to extract and classify text
+                      and image data for client applications
                     </li>
                     <li>
-                      Building backend services and integrating platforms like
-                      Salesforce and ZoomInfo
-                    </li>
-                    <li>
-                      Participating in agile development methodologies and
-                      pursuing Azure certifications (AZ-900, AI-102)
-                    </li>
-                    <li>
-                      <strong>Technologies:</strong> Microsoft Azure, Python,
-                      JavaScript, Node.js, SQL, REST APIs
+                      Collaborated in a six-member team to deploy, monitor, and
+                      optimize scalable Azure-based services across development
+                      environments
                     </li>
                   </ul>
                 </div>
 
-                <div className="border-l-4 border-green-500 pl-4">
+                <div className="border-l-2 border-black/20 pl-4">
                   <h3 className="text-xl font-semibold">
-                    Full Stack Engineer - Civera
+                    Full Stack Engineer Intern · Civera
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Jan 2025 - May 2025 · Boston, Massachusetts (Remote)
-                  </p>
+                  <p className="text-gray-600 text-sm">Jan 2025 – May 2025</p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
                     <li>
-                      Built a full-stack Next.js application for Massachusetts
-                      court case data access
+                      Shipped a full-stack Next.js application enabling
+                      sub-200ms search across 6M+ court records, creating an
+                      alternative to masscourts.org
                     </li>
                     <li>
-                      Engineered resilient data layer using Prisma ORM with
-                      MySQL and JSON fallback
+                      Implemented resilient backend infrastructure (Prisma +
+                      MySQL), ensuring 99.9% uptime via JSON fallback
                     </li>
                     <li>
-                      Implemented streaming search with real-time results and
-                      advanced filtering
+                      Directed frontend development with TypeScript, MUI, and
+                      Tailwind, increasing mobile accessibility by 40%
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-l-2 border-black/20 pl-4">
+                  <h3 className="text-xl font-semibold">AI Fellow · MIT</h3>
+                  <p className="text-gray-600 text-sm">May 2024 – May 2025</p>
+                  <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
+                    <li>
+                      Trained and fine-tuned a 2D CNN achieving 82% accuracy in
+                      classifying broadband network impairments from time-series
+                      data
                     </li>
                     <li>
-                      Integrated Clerk authentication and created responsive
-                      Material-UI components
+                      Transformed frequency–amplitude readings into normalized
+                      2D plots for improved pattern recognition on a dataset of
+                      1,000+ samples
                     </li>
                     <li>
-                      <strong>Technologies:</strong> Next.js, React, TypeScript,
-                      Prisma ORM, MySQL, Material-UI, Tailwind CSS
+                      Collaborated in a research team to deliver findings with
+                      20% accuracy improvement over baseline models
                     </li>
                   </ul>
                 </div>
@@ -103,72 +104,25 @@ export default function About() {
 
             <div>
               <h2 className="text-2xl font-bold mb-3 text-black">Education</h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li>
-                  Boston University - B.S. in Computer Science (Jan 2024 - May
-                  2026)
-                </li>
-                <li>
-                  Adelphi University - B.S. in Computer Science (Sep 2022 - Jan
-                  2024)
-                </li>
-              </ul>
+              <p className="text-black">
+                Boston University · B.S. in Computer Science
+              </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-3 text-black">
-                Skills & Technologies
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                  Microsoft Azure
-                </span>
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                  Python
-                </span>
-                <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
-                  JavaScript
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
-                  Next.js
-                </span>
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
-                  React
-                </span>
-                <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
-                  TypeScript
-                </span>
-                <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
-                  Node.js
-                </span>
-                <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">
-                  Machine Learning
-                </span>
-                <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">
-                  SQL
-                </span>
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
-                  REST APIs
-                </span>
-                <span className="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">
-                  Prisma ORM
-                </span>
-                <span className="bg-lime-100 text-lime-800 px-3 py-1 rounded-full text-sm">
-                  MySQL
-                </span>
+              <h2 className="text-2xl font-bold mb-3 text-black">Skills</h2>
+              <div className="space-y-2 text-sm">
+                <p>
+                  <span className="font-semibold">Languages:</span> Python,
+                  Java, C++, C#, SQL, JavaScript, TypeScript, Kotlin, HTML/CSS,
+                  OCaml, Node.js
+                </p>
+                <p>
+                  <span className="font-semibold">Tools:</span> Git, Microsoft
+                  Azure, Jira, Docker, React.js, TensorFlow, NumPy, Pandas,
+                  CUDA, Kubernetes, Ansible, GitLab, Microservices
+                </p>
               </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold mb-3 text-black">
-                Achievements
-              </h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Spring '24 Dean's List at Boston University</li>
-                <li>
-                  Spring '23 and Fall '23 Dean's List at Adelphi University
-                </li>
-              </ul>
             </div>
           </div>
         </div>
