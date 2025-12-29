@@ -23,8 +23,9 @@ export default function About() {
           <h1 className="text-3xl font-bold mb-6 text-black">about me</h1>
           <div className="space-y-6 text-black">
             <p>
-              Hey there! I'm a Computer Science student at Boston University. I'm passionate about AI, full-stack
-              development, and using tech to solve real-world problems.
+              Hey there! I'm a Computer Science student at Boston University.
+              I'm passionate about AI, full-stack development, and using tech to
+              solve real-world problems.
             </p>
 
             <div>
@@ -32,11 +33,33 @@ export default function About() {
                 Work Experience
               </h2>
               <div className="space-y-4">
-                <div className="border-l-2 border-black/20 pl-4">
+                <div className="border-l-2 border-red-500 pl-4">
+                  <h3 className="text-xl font-semibold">
+                    Machine Learning Engineer Intern · Massachusetts Registry of
+                    Deeds
+                  </h3>
+                  <p className="text-gray-600 text-sm">Sep 2025 - Dec 2025</p>
+                  <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
+                    <li>
+                      Built and deployed a modular OCR + vision-language
+                      pipeline that transcribed and structured 269,000+
+                      historical handwritten Grantor/Grantee index entries
+                      dating back to the 1600s
+                    </li>
+                    <li>
+                      Engineered and deployed a searchable Streamlit application
+                      over the extracted results, enabling sub-second querying,
+                      filtering, and validation of hundreds of thousands of deed
+                      records
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-l-2 border-blue-500 pl-4">
                   <h3 className="text-xl font-semibold">
                     Software Engineer Intern · MILL5
                   </h3>
-                  <p className="text-gray-600 text-sm">May 2025 – Sep 2025</p>
+                  <p className="text-gray-600 text-sm">May 2025 - Sep 2025</p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
                     <li>
                       Built and launched backend services using Microsoft Azure
@@ -57,11 +80,11 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="border-l-2 border-black/20 pl-4">
+                <div className="border-l-2 border-purple-500 pl-4">
                   <h3 className="text-xl font-semibold">
                     Full Stack Engineer Intern · Civera
                   </h3>
-                  <p className="text-gray-600 text-sm">Jan 2025 – May 2025</p>
+                  <p className="text-gray-600 text-sm">Jan 2025 - May 2025</p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
                     <li>
                       Shipped a full-stack Next.js application enabling
@@ -79,9 +102,9 @@ export default function About() {
                   </ul>
                 </div>
 
-                <div className="border-l-2 border-black/20 pl-4">
+                <div className="border-l-2 border-red-500 pl-4">
                   <h3 className="text-xl font-semibold">AI Fellow · MIT</h3>
-                  <p className="text-gray-600 text-sm">May 2024 – May 2025</p>
+                  <p className="text-gray-600 text-sm">May 2024 - May 2025</p>
                   <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
                     <li>
                       Trained and fine-tuned a 2D CNN achieving 82% accuracy in
@@ -89,7 +112,7 @@ export default function About() {
                       data
                     </li>
                     <li>
-                      Transformed frequency–amplitude readings into normalized
+                      Transformed frequency-amplitude readings into normalized
                       2D plots for improved pattern recognition on a dataset of
                       1,000+ samples
                     </li>

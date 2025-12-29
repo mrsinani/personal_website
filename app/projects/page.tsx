@@ -13,7 +13,7 @@ export default function Projects() {
       description:
         "Decentralized travel and real estate platform that reimagines short-term rentals by replacing high-fee, centralized intermediaries like Airbnb with blockchain-powered transparency and fairness.",
       award:
-        "1st Place Winner – Composable dApps & Interoperable Infrastructure Track at EASYA Hackathon @ Harvard",
+        "1st Place Winner - Composable dApps & Interoperable Infrastructure Track at EASYA Hackathon @ Harvard",
       technologies: "Blockchain, Web3, Smart Contracts, React",
       link: "https://github.com/theonlyhennygod/Crypto-Cribs/",
       timeline: "Sep 2025",
@@ -22,9 +22,9 @@ export default function Projects() {
     {
       title: "Attention Arsenal",
       description:
-        "A native iOS productivity app built in Swift/SwiftUI. The reminder app that never gives up – designed to help people stay on track with persistent, thoughtful notifications.",
-      technologies: "Swift, SwiftUI, iOS",
-      link: "https://apps.apple.com/us/app/attention-arsenal/id6749694041",
+        "Achieved 5.8K+ App Store impressions with a native iOS reminder app that helps users build habits through recurring task nudges, built with Swift featuring Core Data persistence, iCloud sync, and customizable scheduled notifications.",
+      technologies: "Swift, SwiftUI, Core Data, iCloud, iOS",
+      link: "https://attentionarsenal.com",
       timeline: "Sep 2025",
       delay: 0.1,
     },
@@ -55,7 +55,7 @@ export default function Projects() {
         "Multi-criteria filtering (court, case type, status, date range)",
         "Resilient data access layer with JSON fallback for 99.9% uptime",
       ],
-      timeline: "Jan 2025 – May 2025",
+      timeline: "Jan 2025 - May 2025",
       company: "Built at Civera",
       delay: 0.2,
     },
@@ -63,7 +63,7 @@ export default function Projects() {
       title: "Chess3",
       description:
         "Led frontend integration using React and Chess.js to create an interactive chessboard interface for Web3 users. Collaborated on backend implementation using Solidity, deploying smart contracts which enable secure, transparent betting between players.",
-      award: '"Best dApp Deployed on Linea" – ETH Prague 2024',
+      award: '"Best dApp Deployed on Linea" - ETH Prague 2024',
       technologies: "Solidity, Web3.js, React, Ethereum, Linea, Chess.js",
       timeline: "ETH Prague 2024",
       delay: 0.25,
