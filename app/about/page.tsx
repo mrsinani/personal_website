@@ -118,14 +118,14 @@ export default function About() {
           <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
           <div className="space-y-3 mb-8">
             <DropdownSection
-              title="ML / AI"
-              id="ml"
-              experiences={mlExperience}
-            />
-            <DropdownSection
               title="Software Engineering"
               id="software"
               experiences={softwareExperience}
+            />
+            <DropdownSection
+              title="ML / AI"
+              id="ml"
+              experiences={mlExperience}
             />
           </div>
 
