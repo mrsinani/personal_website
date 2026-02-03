@@ -42,7 +42,7 @@ export default function Projects() {
 
   return (
     <div
-      className="max-h-[calc(100vh-120px)] overflow-y-auto"
+      className="max-h-[calc(100vh-120px)] overflow-y-auto scroll-container"
       style={{ marginTop: "80px" }}
     >
       <motion.div

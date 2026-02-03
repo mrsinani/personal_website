@@ -8,6 +8,15 @@ body {
     overscroll-behavior: none;
     overflow: hidden;
     height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+/* iOS scroll fix for inner containers */
+.scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    touch-action: pan-y;
 }
 
 :root {
