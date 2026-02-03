@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: "Attention Arsenal",
       description:
-        "Native iOS reminder app with 5.8K+ App Store impressions. Features Core Data persistence, iCloud sync, and scheduled notifications.",
+        "Native iOS reminder app with 8.2K+ App Store impressions. Features Core Data persistence, iCloud sync, and scheduled notifications.",
       tech: "Swift, SwiftUI, Core Data, iCloud",
       link: "https://attentionarsenal.com",
     },
