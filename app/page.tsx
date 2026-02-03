@@ -11,30 +11,9 @@ export default function Home() {
         className="text-center"
       >
         <h1 className="text-6xl font-bold mb-4 text-black">Danaid Sinani</h1>
-        <div className="space-y-2 mb-6">
-          <p className="text-lg text-black/80">
-            Computer Science @ Boston University
-          </p>
-        </div>
-        <p className="text-center text-xl text-black/80 max-w-2xl mx-auto">
-          <motion.span
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            {"Building enterprise cloud applications with AI and machine learning."
-              .split("")
-              .map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.02 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-          </motion.span>
+        <p className="text-xl text-black/80 mb-6">CS @ Boston University</p>
+        <p className="text-lg text-black/60 max-w-xl mx-auto">
+          Full-stack developer and ML engineer building production systems.
         </p>
       </motion.div>
     </div>
