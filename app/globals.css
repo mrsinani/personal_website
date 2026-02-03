@@ -19,9 +19,9 @@ body {
     overflow-y: auto;
     touch-action: pan-y;
     /* Account for navigation (80px) and safe area */
-    max-height: calc(100vh - 80px - env(safe-area-inset-bottom, 0px));
-    max-height: calc(100dvh - 80px - env(safe-area-inset-bottom, 0px));
-    padding-bottom: env(safe-area-inset-bottom, 20px);
+    max-height: calc(100vh - 80px);
+    max-height: calc(100dvh - 80px);
+    padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
 }
 
 :root {
