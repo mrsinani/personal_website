@@ -97,10 +97,7 @@ export default function About() {
   );
 
   return (
-    <div
-      className="max-h-[calc(100vh-120px)] overflow-y-auto scroll-container"
-      style={{ marginTop: "80px" }}
-    >
+    <div className="scroll-container" style={{ marginTop: "80px" }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

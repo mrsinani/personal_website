@@ -76,60 +76,61 @@ export default function Stats() {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg"
-      style={{ marginTop: "80px", paddingBottom: "40px" }}
-    >
-      <h1 className="text-3xl font-bold mb-8 text-black">stats</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <motion.div
-          className="text-center p-6 bg-white/70 rounded-lg"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <p className="text-4xl font-bold text-blue-600">
-            {githubStats.loading ? "..." : githubStats.publicRepos ?? "—"}
-          </p>
-          <p className="text-black">Public Repos</p>
-        </motion.div>
-        <motion.div
-          className="text-center p-6 bg-white/70 rounded-lg"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <p className="text-4xl font-bold text-blue-600">
-            {githubStats.loading ? "..." : githubStats.totalStars ?? "—"}
-          </p>
-          <p className="text-black">Total Stars</p>
-        </motion.div>
-        <motion.div
-          className="text-center p-6 bg-white/70 rounded-lg"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          <p className="text-4xl font-bold text-blue-600">
-            {githubStats.loading ? "..." : githubStats.yearsOnGithub ?? "—"}
-          </p>
-          <p className="text-black">Years on GitHub</p>
-        </motion.div>
-        <motion.div
-          className="text-center p-6 bg-white/70 rounded-lg"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          <p className="text-4xl font-bold text-blue-600">
-            {secondsAlive.toLocaleString()}
-          </p>
-          <p className="text-black">Seconds Alive</p>
-        </motion.div>
-      </div>
-    </motion.div>
+    <div className="scroll-container" style={{ marginTop: "80px" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-lg"
+      >
+        <h1 className="text-3xl font-bold mb-8 text-black">stats</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="text-center p-6 bg-white/70 rounded-lg"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <p className="text-4xl font-bold text-blue-600">
+              {githubStats.loading ? "..." : githubStats.publicRepos ?? "—"}
+            </p>
+            <p className="text-black">Public Repos</p>
+          </motion.div>
+          <motion.div
+            className="text-center p-6 bg-white/70 rounded-lg"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            <p className="text-4xl font-bold text-blue-600">
+              {githubStats.loading ? "..." : githubStats.totalStars ?? "—"}
+            </p>
+            <p className="text-black">Total Stars</p>
+          </motion.div>
+          <motion.div
+            className="text-center p-6 bg-white/70 rounded-lg"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            <p className="text-4xl font-bold text-blue-600">
+              {githubStats.loading ? "..." : githubStats.yearsOnGithub ?? "—"}
+            </p>
+            <p className="text-black">Years on GitHub</p>
+          </motion.div>
+          <motion.div
+            className="text-center p-6 bg-white/70 rounded-lg"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <p className="text-4xl font-bold text-blue-600">
+              {secondsAlive.toLocaleString()}
+            </p>
+            <p className="text-black">Seconds Alive</p>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 }

@@ -7,7 +7,8 @@ body {
     background-color: #fafafa;
     overscroll-behavior: none;
     overflow: hidden;
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
     position: fixed;
     width: 100%;
 }
@@ -17,6 +18,10 @@ body {
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     touch-action: pan-y;
+    /* Account for navigation (80px) and safe area */
+    max-height: calc(100vh - 80px - env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 80px - env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 20px);
 }
 
 :root {
