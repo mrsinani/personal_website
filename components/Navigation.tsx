@@ -10,7 +10,7 @@ export default function Navigation() {
     const isActive = (path: string) => pathname === path;
 
     return (
-        <nav className="w-full backdrop-blur-sm fixed top-0 left-0">
+        <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-sm">
             <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
                 <Link href="/" className="text-2xl font-bold text-black mb-4 sm:mb-0">
                     personal website

@@ -7,35 +7,57 @@ export default function About() {
 
   const mlExperience = [
     {
-      role: "Machine Learning Engineer",
-      company: "Commonwealth of Massachusetts",
-      period: "Sep 2025 - Dec 2025",
+      role: "Machine Learning Engineer Intern",
+      company: "Massachusetts Registry of Deeds",
+      period: "Sep 2025 – Dec 2025",
       description:
-        "Built OCR + vision-language pipeline processing 269K+ handwritten records from the 1600s. Deployed searchable Streamlit app for archival research.",
+        "Architected a modular OCR + vision-language pipeline that transcribed and structured 269,000+ historical handwritten index entries dating back to the 1600s. Launched a searchable app for archival and public research use.",
     },
     {
       role: "AI Fellow",
-      company: "Break Through Tech",
-      period: "May 2024 - May 2025",
+      company: "MIT",
+      period: "May 2024 – May 2025",
       description:
-        "Trained CNN achieving 82% accuracy classifying broadband network impairments. 20% improvement over baseline models.",
+        "Designed and deployed an AI pipeline integrating a fine-tuned 2D CNN with automated classification logic, achieving 82% accuracy on broadband network impairment detection, replacing a fully manual review process.",
     },
   ];
 
   const softwareExperience = [
     {
       role: "Software Engineer",
-      company: "MILL5",
-      period: "May 2025 - Sep 2025",
+      company: "Civera",
+      period: "Jan 2026 – Present",
       description:
-        "Built Azure backend services integrating Salesforce and ZoomInfo APIs. Developed Vision AI prototypes with OCR for client applications.",
+        "Engineered a natural-language-to-SQL analytics platform enabling non-technical users to query millions of Massachusetts court records in plain English, with a multi-stage GPT-4o pipeline and real-time SSE streaming.",
     },
     {
-      role: "Full Stack Engineer",
-      company: "Civera",
-      period: "Jan 2025 - May 2025",
+      role: "Software Engineer Intern",
+      company: "MILL5",
+      period: "May 2025 – Sep 2025",
       description:
-        "Shipped Next.js app with sub-200ms search across 6M+ court records. Built resilient backend with 99.9% uptime.",
+        "Engineered backend services using Azure and Node.js, integrating Salesforce and ZoomInfo APIs to automate data aggregation and lead enrichment, reducing latency by over 40%.",
+    },
+    {
+      role: "Full Stack Engineer Intern",
+      company: "Civera",
+      period: "Jan 2025 – May 2025",
+      description:
+        "Shipped a full-stack Next.js application enabling sub-200ms search across 6M+ court records. Built resilient backend infrastructure with 99.9% uptime.",
+    },
+  ];
+
+  const awards = [
+    {
+      title: "1st Place — EasyA Harvard Hackathon",
+      date: "Sep 2025",
+    },
+    {
+      title: "3rd Place — Avalanche Blockchain BU Hackathon",
+      date: "Mar 2025",
+    },
+    {
+      title: "Best dApp Deployed on Linea — ETHPrague 2024",
+      date: "Jun 2024",
     },
   ];
 
@@ -97,7 +119,7 @@ export default function About() {
   );
 
   return (
-    <div className="scroll-container" style={{ marginTop: "80px" }}>
+    <div className="scroll-container mt-[110px] sm:mt-[80px]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -108,8 +130,9 @@ export default function About() {
           <h1 className="text-3xl font-bold mb-6 text-black">About</h1>
 
           <p className="text-black mb-8">
-            CS student at Boston University. I build full-stack applications and
-            ML systems that solve real problems.
+            I build full-stack applications and ML systems that solve real
+            problems at scale. Currently engineering NLP-to-SQL tooling at
+            Civera.
           </p>
 
           <h2 className="text-2xl font-bold mb-4 text-black">Experience</h2>
@@ -126,20 +149,40 @@ export default function About() {
             />
           </div>
 
+          <h2 className="text-2xl font-bold mb-4 text-black">
+            Hackathons & Awards
+          </h2>
+          <div className="space-y-2 mb-8">
+            {awards.map((award, idx) => (
+              <div
+                key={idx}
+                className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0"
+              >
+                <span className="text-black/80 text-sm font-medium">
+                  {award.title}
+                </span>
+                <span className="text-gray-500 text-xs ml-4 shrink-0">
+                  {award.date}
+                </span>
+              </div>
+            ))}
+          </div>
+
           <h2 className="text-2xl font-bold mb-3 text-black">Education</h2>
           <p className="text-black mb-8">
-            Boston University · B.S. Computer Science · Jan 2024 - May 2026
+            Boston University · B.S. Computer Science · Sep 2022 – May 2026
           </p>
 
           <h2 className="text-2xl font-bold mb-3 text-black">Skills</h2>
           <div className="space-y-2 text-sm text-black/80">
             <p>
-              <span className="font-semibold text-black">Languages:</span>{" "}
-              Python, JavaScript, TypeScript, Java, C++, SQL, Kotlin
+              <span className="font-semibold text-black">Tools:</span> React,
+              Python, Next.js, TypeScript, Node.js, Tailwind, GraphQL, Supabase,
+              Prisma, MySQL, PostgreSQL, Docker, GitHub Actions, CI/CD
             </p>
             <p>
-              <span className="font-semibold text-black">Tools:</span> React,
-              Next.js, Node.js, Azure, Docker, TensorFlow, Git
+              <span className="font-semibold text-black">AI/ML:</span> OpenAI
+              API, GPT-4o, LLM Prompt Engineering, Azure Cognitive Services
             </p>
           </div>
         </div>

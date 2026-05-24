@@ -18,10 +18,16 @@ body {
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     touch-action: pan-y;
-    /* Account for navigation (80px) and safe area */
-    max-height: calc(100vh - 80px);
-    max-height: calc(100dvh - 80px);
+    max-height: calc(100vh - 110px);
+    max-height: calc(100dvh - 110px);
     padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 640px) {
+    .scroll-container {
+        max-height: calc(100vh - 80px);
+        max-height: calc(100dvh - 80px);
+    }
 }
 
 :root {

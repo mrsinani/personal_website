@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <div className="scroll-container" style={{ marginTop: "80px" }}>
+    <div className="scroll-container mt-[110px] sm:mt-[80px]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
