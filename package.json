@@ -10,6 +10,7 @@
     "vercel": "NODE_OPTIONS='--no-webstorage' vercel"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "next": "^14.2.23",
