@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import Navigation from "@/components/Navigation";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,6 +72,7 @@ export default function RootLayout({
             <main className="container mx-auto px-4">{children}</main>
           </div>
         </AuroraBackground>
+        <Analytics />
       </body>
     </html>
   );
