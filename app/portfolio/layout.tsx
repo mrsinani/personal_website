@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Freelance Portfolio",
+  title: "Freelance Portfolio | Danaid Sinani",
+  description:
+    "Websites and online tools built for businesses, clients, and shipped products by Danaid Sinani.",
+  openGraph: {
+    title: "Freelance Portfolio | Danaid Sinani",
+    description:
+      "Websites and online tools built for businesses, clients, and shipped products by Danaid Sinani.",
+    url: "https://danaidsinani.com/portfolio",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
