@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { profile } from "@/lib/site-data";
 
 export default function Contact() {
   return (
@@ -19,10 +20,10 @@ export default function Contact() {
           >
             <h2 className="text-lg font-semibold text-black">Email</h2>
             <a
-              href="mailto:danaid@bu.edu"
+              href={`mailto:${profile.email}`}
               className="text-blue-600 hover:text-blue-800"
             >
-              danaid@bu.edu
+              {profile.email}
             </a>
           </motion.div>
 
@@ -32,7 +33,12 @@ export default function Contact() {
             transition={{ delay: 0.3 }}
           >
             <h2 className="text-lg font-semibold text-black">Phone</h2>
-            <p className="text-black">(917) 972-4855</p>
+            <a
+              href={`tel:${profile.phoneTel}`}
+              className="text-blue-600 hover:text-blue-800"
+            >
+              {profile.phone}
+            </a>
           </motion.div>
 
           <motion.div
@@ -43,7 +49,7 @@ export default function Contact() {
             <h2 className="text-lg font-semibold text-black">Social</h2>
             <div className="space-y-2">
               <a
-                href="https://linkedin.com/in/mrsinani/"
+                href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-blue-600 hover:text-blue-800"
@@ -51,7 +57,7 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/mrsinani"
+                href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-blue-600 hover:text-blue-800"
@@ -59,7 +65,7 @@ export default function Contact() {
                 GitHub
               </a>
               <a
-                href="https://docs.google.com/document/d/1lxr2HLnieNsidhHZqYtyw5R_e1kjxvcrAiXzkPuaaPg/edit?usp=sharing"
+                href={profile.resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-blue-600 hover:text-blue-800"

@@ -3,7 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import Navigation from "@/components/Navigation";
+import PersonJsonLd from "@/components/PersonJsonLd";
 import { Analytics } from "@vercel/analytics/next";
+import { profile, SITE_URL } from "@/lib/site-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +57,20 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: SITE_URL,
+    types: {
+      "text/plain": `${SITE_URL}/llms.txt`,
+    },
+  },
+  other: {
+    "ai-content": `${SITE_URL}/llms-full.txt`,
+    "profile-json": `${SITE_URL}/profile.json`,
   },
 };
 
@@ -65,7 +81,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="author" href={`${SITE_URL}/llms.txt`} type="text/plain" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${SITE_URL}/llms-full.txt`}
+          title={`${profile.name} — complete site content`}
+        />
+        <link
+          rel="alternate"
+          type="application/json"
+          href={`${SITE_URL}/profile.json`}
+          title={`${profile.name} profile`}
+        />
+      </head>
       <body className={inter.className}>
+        <PersonJsonLd />
         <AuroraBackground className="min-h-screen">
           <div className="w-full">
             <Navigation />
