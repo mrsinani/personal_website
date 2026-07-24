@@ -153,6 +153,25 @@ A green "Sitemap processed successfully" with 9 discovered pages means Google fo
 
 Use **URL Inspection** to check whether a specific page (e.g. `/llms-full.txt`) has been crawled and indexed.
 
+> Plain-text files (`/llms.txt`, `/llms-full.txt`) often show "Crawled - currently not indexed." That's expected — Google deprioritizes non-HTML — and it does **not** stop AI crawlers, which fetch those files directly. The page that matters for indexing is `/contact`.
+
+## Bing Webmaster Tools
+
+Bing powers ChatGPT search and Microsoft Copilot, so submit here too:
+
+1. [Bing Webmaster Tools](https://www.bing.com/webmasters) → sign in.
+2. **Import your sites from Google Search Console** (one click, copies verification + sitemap). Fallback: **Add site manually** → verify via DNS record → **Sitemaps** → submit `https://danaidsinani.com/sitemap.xml`.
+3. **URL Inspection** → enter `/contact` → confirm "Indexed successfully." Use **Request indexing** to force a re-crawl after content or markup changes.
+
+Note: Bing's inspector may report "No Markup found" from a stale snapshot even when JSON-LD is live. Verify what's actually served instead of trusting the widget:
+
+```bash
+curl -s https://danaidsinani.com/contact | grep -o 'application/ld+json'
+curl -s https://danaidsinani.com/contact | grep -o '"telephone":"[^"]*"'
+```
+
+If those return matches, the markup is fine — just **Request indexing** to refresh Bing's copy.
+
 ## Important gotchas
 
 ### Keep one source of truth

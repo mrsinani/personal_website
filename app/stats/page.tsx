@@ -36,29 +36,14 @@ export default function Stats() {
   useEffect(() => {
     async function fetchGitHubStats() {
       try {
-        const userRes = await fetch("https://api.github.com/users/mrsinani");
-        const userData = await userRes.json();
-
-        const reposRes = await fetch(
-          "https://api.github.com/users/mrsinani/repos?per_page=100"
-        );
-        const reposData = await reposRes.json();
-
-        const totalStars = reposData.reduce(
-          (acc: number, repo: { stargazers_count: number }) =>
-            acc + repo.stargazers_count,
-          0
-        );
-
-        const createdAt = new Date(userData.created_at);
-        const yearsOnGithub = Math.floor(
-          (Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24 * 365)
-        );
+        const res = await fetch("/profile.json");
+        const data = await res.json();
+        const github = data.stats?.github;
 
         setGithubStats({
-          publicRepos: userData.public_repos,
-          totalStars,
-          yearsOnGithub,
+          publicRepos: github?.publicRepos ?? null,
+          totalStars: github?.totalStars ?? null,
+          yearsOnGithub: github?.yearsOnGithub ?? null,
           loading: false,
         });
       } catch (error) {

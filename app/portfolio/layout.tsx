@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "https://danaidsinani.com/portfolio",
+  },
 };
 
 export default function PortfolioLayout({

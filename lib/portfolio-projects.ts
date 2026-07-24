@@ -11,9 +11,6 @@ export type PortfolioProject = {
   rank: number;
   /** Set to true to show on /portfolio */
   enabled: boolean;
-  source: "vercel" | "manual";
-  vercelProjectId?: string;
-  domains?: string[];
 };
 
 export const portfolioCategoryOrder: PortfolioCategory[] = [
@@ -55,7 +52,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 1,
     enabled: true,
-    source: "manual",
   },
   {
     id: "home-appliances-li",
@@ -66,8 +62,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 2,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_qFRbA0Wl0wyCUwuCs6KRBcwz7J2f",
   },
   {
     id: "davitt-electric",
@@ -79,8 +73,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 3,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_gUdKol7lZ0bnjg73uyT0Wwk4J9td",
   },
   {
     id: "as-web",
@@ -92,8 +84,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 4,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_mnlcLkZ32kg8wxnbWT8dxnNq2pFH",
   },
   {
     id: "inventory-tracker",
@@ -104,8 +94,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 5,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_yqfPyjtRLzLcmdICjIeCGkSbIdiR",
   },
   {
     id: "paranumeron",
@@ -116,7 +104,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "client",
     rank: 6,
     enabled: true,
-    source: "manual",
   },
   {
     id: "masscourtsplus",
@@ -127,7 +114,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 1,
     enabled: true,
-    source: "manual",
   },
   {
     id: "fineprint",
@@ -138,8 +124,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 2,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_lJIfcZsB4JIdcdC7wKI8l3j0Zxef",
   },
   {
     id: "attention-arsenal-web",
@@ -150,8 +134,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 3,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_e2FMT7UEpM1k71GU3iJF85YYj926",
   },
   {
     id: "tradeguard",
@@ -162,12 +144,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 4,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_Y9X0SBBGxbKEJG3em6Q3gYTyD65U",
-    domains: [
-      "tradeguardai.com",
-      "tradeguard-mrsinanis-projects.vercel.app",
-    ],
   },
   {
     id: "moneyfi",
@@ -178,8 +154,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 5,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_2ty1jrAAOF4KNNWlxDTgoqfMq8Vw",
   },
   {
     id: "cl1ppy",
@@ -190,9 +164,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 6,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_IYD4jniTNnfnrbC3NnbvlGTfqh4E",
-    domains: ["www.cl1ppy.boston", "cl1ppy-landingpage.vercel.app"],
   },
   {
     id: "bitlook",
@@ -203,8 +174,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "product",
     rank: 7,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_LSDmJGvHmPz8lM4LlyYy9y64e0Dq",
   },
   {
     id: "attendance-app",
@@ -215,8 +184,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "other",
     rank: 1,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_FEuF2aYSpDECBz1PlcArJum2QuOL",
   },
   {
     id: "music-ensamble",
@@ -227,8 +194,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "other",
     rank: 2,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_wkFrkRqp6BX89FLmlXyZG5FV55Hh",
   },
   {
     id: "meme-website",
@@ -239,8 +204,6 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "other",
     rank: 3,
     enabled: true,
-    source: "vercel",
-    vercelProjectId: "prj_bC0DctDou7iAtvxxwKuFdGvoS2Bw",
   },
 ];
 

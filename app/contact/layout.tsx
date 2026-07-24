@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: `Email: ${profile.email}. Phone: ${profile.phone}.`,
     url: `${SITE_URL}/contact`,
   },
+  alternates: {
+    canonical: `${SITE_URL}/contact`,
+  },
 };
 
 export default function ContactLayout({

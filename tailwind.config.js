@@ -7,13 +7,6 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			colors: {
-				aurora: {
-					blue: '#60a5fa',
-					indigo: '#a5b4fc',
-					violet: '#ddd6fe'
-				}
-			},
 			animation: {
 				aurora: 'aurora 20s linear infinite'
 			},

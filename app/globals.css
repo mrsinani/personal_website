@@ -41,22 +41,3 @@ body {
     --violet-200: #ddd6fe;
 }
 
-@layer utilities {
-    .animate-aurora {
-        animation: aurora 20s linear infinite;
-    }
-}
-
-@keyframes aurora {
-    0% {
-        background-position: 50% 50%, 50% 50%;
-    }
-
-    50% {
-        background-position: 100% 100%, 100% 100%;
-    }
-
-    100% {
-        background-position: 50% 50%, 50% 50%;
-    }
-}
