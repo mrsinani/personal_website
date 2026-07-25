@@ -6,11 +6,13 @@ import { profile } from "@/lib/site-data";
 export default function Stats() {
   const [githubStats, setGithubStats] = useState<{
     publicRepos: number | null;
+    privateRepos: number | null;
     totalStars: number | null;
     yearsOnGithub: number | null;
     loading: boolean;
   }>({
     publicRepos: null,
+    privateRepos: null,
     totalStars: null,
     yearsOnGithub: null,
     loading: true,
@@ -43,6 +45,7 @@ export default function Stats() {
 
         setGithubStats({
           publicRepos: github?.publicRepos ?? null,
+          privateRepos: github?.privateRepos ?? null,
           totalStars: github?.totalStars ?? null,
           yearsOnGithub: github?.yearsOnGithub ?? null,
           loading: false,
@@ -51,6 +54,7 @@ export default function Stats() {
         console.error("Failed to fetch GitHub stats:", error);
         setGithubStats({
           publicRepos: null,
+          privateRepos: null,
           totalStars: null,
           yearsOnGithub: null,
           loading: false,
@@ -78,9 +82,17 @@ export default function Stats() {
             transition={{ delay: 0.2 }}
           >
             <p className="text-4xl font-bold text-blue-600">
-              {githubStats.loading ? "..." : githubStats.publicRepos ?? "—"}
+              {githubStats.loading
+                ? "..."
+                : githubStats.publicRepos !== null
+                ? githubStats.publicRepos + (githubStats.privateRepos ?? 0)
+                : "—"}
             </p>
-            <p className="text-black">Public Repos</p>
+            <p className="text-black">
+              Total Repos
+              {githubStats.privateRepos !== null &&
+                ` (${githubStats.privateRepos} private)`}
+            </p>
           </motion.div>
           <motion.div
             className="text-center p-6 bg-white/70 rounded-lg"

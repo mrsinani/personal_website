@@ -1,6 +1,7 @@
 export type GitHubStats = {
   username: string;
   publicRepos: number;
+  privateRepos: number | null;
   totalStars: number;
   yearsOnGithub: number;
   profileUrl: string;
@@ -8,9 +9,17 @@ export type GitHubStats = {
 
 export async function getGitHubStats(): Promise<GitHubStats | null> {
   try {
-    const userRes = await fetch("https://api.github.com/users/mrsinani", {
-      next: { revalidate: 3600 },
-    });
+    // With a token (read:user scope only, no repo access), GitHub's
+    // authenticated /user endpoint adds total_private_repos — a count only,
+    // never the private repos themselves.
+    const token = process.env.GITHUB_TOKEN;
+    const userRes = await fetch(
+      token ? "https://api.github.com/user" : "https://api.github.com/users/mrsinani",
+      {
+        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+        next: { revalidate: 3600 },
+      }
+    );
     if (!userRes.ok) return null;
 
     const userData = await userRes.json();
@@ -34,6 +43,7 @@ export async function getGitHubStats(): Promise<GitHubStats | null> {
     return {
       username: "mrsinani",
       publicRepos: userData.public_repos,
+      privateRepos: token ? userData.total_private_repos ?? null : null,
       totalStars,
       yearsOnGithub,
       profileUrl: "https://github.com/mrsinani",

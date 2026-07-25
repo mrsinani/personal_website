@@ -258,7 +258,13 @@ export function buildLlmsFullTxt(githubStats: GitHubStats | null): string {
       ? [
           `GitHub username: ${githubStats.username}`,
           `GitHub profile: ${githubStats.profileUrl}`,
-          `Public repos: ${githubStats.publicRepos}`,
+          `Total repos: ${
+            githubStats.publicRepos + (githubStats.privateRepos ?? 0)
+          }${
+            githubStats.privateRepos !== null
+              ? ` (${githubStats.privateRepos} private)`
+              : ""
+          }`,
           `Total stars: ${githubStats.totalStars}`,
           `Years on GitHub: ${githubStats.yearsOnGithub}`,
         ]
