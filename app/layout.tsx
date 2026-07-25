@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     icon: "/icon.jpeg",
     apple: "/icon.jpeg",
   },
-  metadataBase: new URL("https://danaidsinani.com"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://danaidsinani.com",
+    url: SITE_URL,
     siteName: "Danaid Sinani",
     title: "Danaid Sinani - Software Engineer",
     description:

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import { profile } from "@/lib/site-data";
 
 export default function Stats() {
   const [githubStats, setGithubStats] = useState<{
@@ -17,7 +18,7 @@ export default function Stats() {
 
   const [secondsAlive, setSecondsAlive] = useState(
     Math.floor(
-      (Date.now() - new Date("2003-08-11T23:00:00+02:00").getTime()) / 1000
+      (Date.now() - new Date(profile.birthTimestamp).getTime()) / 1000
     )
   );
 
@@ -25,7 +26,7 @@ export default function Stats() {
     const interval = setInterval(() => {
       setSecondsAlive(
         Math.floor(
-          (Date.now() - new Date("2003-08-11T23:00:00+02:00").getTime()) / 1000
+          (Date.now() - new Date(profile.birthTimestamp).getTime()) / 1000
         )
       );
     }, 1000);

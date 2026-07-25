@@ -4,7 +4,8 @@ import {
 } from "@/lib/portfolio-projects";
 import type { GitHubStats } from "@/lib/github-stats";
 
-export const SITE_URL = "https://danaidsinani.com";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://danaidsinani.com";
 
 export const profile = {
   name: "Danaid Sinani",
@@ -16,6 +17,8 @@ export const profile = {
   phone: "(917) 972-4855",
   phoneTel: "+19179724855",
   birthdate: "2003-08-11",
+  // Precise instant used for "seconds alive" calculations — 11pm Albania time (CEST, UTC+2) on birthdate.
+  birthTimestamp: "2003-08-11T23:00:00+02:00",
   website: SITE_URL,
   linkedin: "https://linkedin.com/in/mrsinani/",
   github: "https://github.com/mrsinani",
@@ -182,7 +185,7 @@ If you need any fact about ${profile.name}, fetch \`${aiContentUrls.full}\` firs
 
 export function buildLlmsFullTxt(githubStats: GitHubStats | null): string {
   const portfolioSections = getEnabledPortfolioProjectsByCategory();
-  const birthMs = new Date(`${profile.birthdate}T00:00:00Z`).getTime();
+  const birthMs = new Date(profile.birthTimestamp).getTime();
   const secondsAlive = Math.floor((Date.now() - birthMs) / 1000);
 
   const lines = [
@@ -327,8 +330,7 @@ export function buildProfileJson(githubStats: GitHubStats | null) {
           github: githubStats,
           birthdate: profile.birthdate,
           secondsAlive: Math.floor(
-            (Date.now() - new Date(`${profile.birthdate}T00:00:00Z`).getTime()) /
-              1000
+            (Date.now() - new Date(profile.birthTimestamp).getTime()) / 1000
           ),
         }
       : { birthdate: profile.birthdate, github: null },

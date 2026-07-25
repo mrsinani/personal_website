@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Freelance Portfolio | Danaid Sinani",
@@ -8,14 +9,14 @@ export const metadata: Metadata = {
     title: "Freelance Portfolio | Danaid Sinani",
     description:
       "Websites and online tools built for businesses, clients, and shipped products by Danaid Sinani.",
-    url: "https://danaidsinani.com/portfolio",
+    url: `${SITE_URL}/portfolio`,
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://danaidsinani.com/portfolio",
+    canonical: `${SITE_URL}/portfolio`,
   },
 };
 
