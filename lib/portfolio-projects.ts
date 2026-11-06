@@ -43,6 +43,17 @@ export const portfolioCategoryLabels: Record<
  */
 export const portfolioProjects: PortfolioProject[] = [
   {
+    id: "tsq-billboard",
+    title: "Concept by JC: Times Square Billboard",
+    description:
+      "Booking site that puts customers' photos and videos on a 4K LED billboard at 1560 Broadway in Times Square. People upload media, pick a date, and pay in under two minutes, with no account or sales call. Covers personal moments like birthdays and proposals, plus business ads from $500 a day.",
+    url: "https://www.tsqbillboard.com",
+    client: "Concept by JC",
+    category: "client",
+    rank: 0,
+    enabled: true,
+  },
+  {
     id: "vang-coffee-bar",
     title: "Vang Coffee Bar",
     description:
