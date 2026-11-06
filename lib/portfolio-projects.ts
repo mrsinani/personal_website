@@ -164,7 +164,7 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://www.moneyfiapp.com",
     category: "product",
     rank: 5,
-    enabled: true,
+    enabled: false,
   },
   {
     id: "cl1ppy",
@@ -174,7 +174,7 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://www.cl1ppy.boston",
     category: "product",
     rank: 6,
-    enabled: true,
+    enabled: false,
   },
   {
     id: "bitlook",
@@ -184,7 +184,7 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://bitlook-mrsinanis-projects.vercel.app",
     category: "product",
     rank: 7,
-    enabled: true,
+    enabled: false,
   },
   {
     id: "attendance-app",
@@ -194,7 +194,7 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://attendance-app-indol-two.vercel.app",
     category: "other",
     rank: 1,
-    enabled: true,
+    enabled: false,
   },
   {
     id: "music-ensamble",
@@ -214,7 +214,7 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://meme-website-sable.vercel.app",
     category: "other",
     rank: 3,
-    enabled: true,
+    enabled: false,
   },
 ];
 
